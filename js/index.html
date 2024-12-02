@@ -9,25 +9,18 @@
 </head>
 <body>
     <h1 style="text-align:center;">Hello</h1>
-    <script src="https://d1m3yr09g6dton.cloudfront.net/lex-web-ui-loader.min.js"></script>
-<script>
-  var loaderOpts = {
-    baseUrl: 'https://d1m3yr09g6dton.cloudfront.net/',
-    shouldLoadMinDeps: true
-  };
-  var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
-  var chatbotUiConfig = {
-          /* Example of setting session attributes on parent page
-          lex: {
-            sessionAttributes: {
-              userAgent: navigator.userAgent,
-              QNAClientFilter: ''
-            }
-          }
-          */
-        };
-  loader.load(chatbotUiConfig)
-    .catch(function (error) { console.error(error); });
+    <script type="text/javascript">
+  (function(w, d, x, id){
+    s=d.createElement('script');
+    s.src='https://dend6g4sigg57.cloudfront.net/amazon-connect-chat-interface-client.js';
+    s.async=1;
+    s.id=id;
+    d.getElementsByTagName('head')[0].appendChild(s);
+    w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+  })(window, document, 'amazon_connect', 'f4df2b68-2f89-43c8-9086-d91fa146015d');
+  amazon_connect('styles', { iconType: 'CHAT_VOICE', openChat: { color: '#ffffff', backgroundColor: '#000000' }, closeChat: { color: '#ffffff', backgroundColor: '#000000'} });
+  amazon_connect('snippetId', 'QVFJREFIaUpYdjhaUmd2VmlOeXhuZFo4OWJTanhLR3pJYStHc1BvQms1ZnNIczNJNEFId3M3SW1vRjY5S2FSV3lMUkp3UzhxQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNUmdRWWdxRkhPZXduZ043akFnRVFnQ3ZFQ3BuMFI4UVF2QVlPdnAydHlOdTc2cFo2K2FaeUFZQ3QrUG9sOGtld1dId2s2Q1hodGFCeVErZUY6OmlpV2ZsVzYraXBnZ08wSjd3SzlzaXRHNXc2OEN3NkUxbWltWmpLYUZsOFdrSGRUSC9wWWpSMTMxY1ljTS9yVFZPdUkrZVR3UUV5MHMyR2RsNFNtSHBTQnZIYTA3dThxbVB2SGxLSEc0NGM3cmxhMlN2Z2xGWmRNQ2FVam1hYTl4ZkgyUW56M3g1RTVidEh2ZFZsdk50bGc0NFV6KzFKWT0=');
+  amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown', 'application/vnd.amazonaws.connect.message.interactive', 'application/vnd.amazonaws.connect.message.interactive.response' ]);
 </script>
 </body>
 </html>
